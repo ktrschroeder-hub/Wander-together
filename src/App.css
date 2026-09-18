@@ -8,9 +8,9 @@
 
 body {
   margin: 0;
-  background: #f8f5ef;
+  background: #dce8ed;
   font-family: Arial, Helvetica, sans-serif;
-  color: #555;
+  color: #475569;
 }
 
 a {
@@ -28,7 +28,7 @@ a {
   height: 45vh;
 
   background-image:
-    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.45)),
+    linear-gradient(rgba(0,0,0,.16), rgba(0,0,0,.28)),
     url("./assets/images/London.jpeg");
 
   background-size: cover;
@@ -46,7 +46,7 @@ a {
   content:"";
   position:absolute;
   inset:0;
-  background:rgba(0,0,0,.18);
+  background:rgba(0,0,0,.06);
 }
 
 .overlay{
@@ -65,18 +65,20 @@ a {
   letter-spacing:4px;
   text-transform:uppercase;
   font-size:.95rem;
+  margin:0 0 24px;
 }
 
 .overlay h1{
   font-family:Georgia, serif;
   font-size:4.5rem;
-  margin:12px 0;
+  margin:0 0 36px;
   color:white;
 }
 
 .countdown{
   font-size:1.6rem;
-  margin-top:16px;
+  margin-top:0;
+  margin-bottom:0;
 }
 
 /* ==========================================
@@ -99,13 +101,15 @@ a {
 }
 
 .card{
-  background:white;
+  background:#ffffff;
 
   padding:28px;
 
   border-radius:22px;
 
-  box-shadow:0 12px 30px rgba(0,0,0,.08);
+  box-shadow:0 14px 32px rgba(30,64,83,.18);
+
+  border:1px solid #c5d5dc;
 
   border-top:6px solid transparent;
 
