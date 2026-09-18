@@ -1,0 +1,359 @@
+/* ==========================================
+   GLOBAL
+========================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f8f5ef;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #555;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==========================================
+   HOME PAGE HERO
+========================================== */
+
+.hero {
+  position: relative;
+
+  height: 45vh;
+
+  background-image:
+    linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.45)),
+    url("./assets/images/London.jpeg");
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+  border-radius: 0 0 24px 24px;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.18);
+}
+
+.overlay{
+  position:relative;
+  z-index:2;
+
+  text-align:center;
+  color:white;
+
+  text-shadow:0 4px 18px rgba(0,0,0,.45);
+
+  transform:translateY(-35px);
+}
+
+.eyebrow{
+  letter-spacing:4px;
+  text-transform:uppercase;
+  font-size:.95rem;
+}
+
+.overlay h1{
+  font-family:Georgia, serif;
+  font-size:4.5rem;
+  margin:12px 0;
+  color:white;
+}
+
+.countdown{
+  font-size:1.6rem;
+  margin-top:16px;
+}
+
+/* ==========================================
+   HOME PAGE CARDS
+========================================== */
+
+.cards{
+  max-width:1200px;
+  margin:40px auto;
+
+  padding:0 40px 40px;
+
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:24px;
+}
+
+.card-link{
+  display:block;
+}
+
+.card{
+  background:white;
+
+  padding:28px;
+
+  border-radius:22px;
+
+  box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+  border-top:6px solid transparent;
+
+  transition:.25s;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+
+  box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.card span{
+  font-size:2rem;
+}
+
+.card h2{
+  margin:14px 0 10px;
+  color:#2b2b35;
+}
+
+.card p{
+  margin:0;
+  line-height:1.5;
+  color:#666;
+}
+
+/* Accent colors */
+
+.england{
+  border-top-color:#6b9e5b;
+}
+
+.mystery{
+  border-top-color:#d4b042;
+}
+
+.porto{
+  border-top-color:#c56a45;
+}
+
+.today{
+  border-top-color:#F2C94C;
+}
+
+.trove {
+  border-top-color: #6C63FF;
+}
+
+.hub{
+  border-top-color:#E76F51;
+}
+
+/* ==========================================
+   ENGLAND PAGE
+========================================== */
+
+.england-page{
+  max-width:1200px;
+  margin:auto;
+  padding-bottom:60px;
+}
+
+.england-hero{
+
+  height:320px;
+
+  background-size:cover;
+  background-position:center;
+
+  display:flex;
+  justify-content:center;
+  align-items:flex-end;
+
+  border-radius:0 0 24px 24px;
+
+  overflow:hidden;
+
+  margin-bottom:30px;
+}
+
+.hero-overlay{
+
+  width:100%;
+
+  text-align:center;
+
+  padding:35px;
+
+  background:linear-gradient(
+      transparent,
+      rgba(0,0,0,.55)
+  );
+}
+
+.hero-overlay h1{
+
+  margin:0;
+
+  color:white;
+
+  font-size:4rem;
+
+  font-family:Georgia, serif;
+}
+
+.hero-overlay p{
+
+  margin-top:10px;
+
+  color:white;
+
+  font-size:1.7rem;
+}
+
+/* ==========================================
+   NAVIGATION BAR
+========================================== */
+
+.trip-nav{
+
+  display:flex;
+
+  justify-content:center;
+
+  flex-wrap:wrap;
+
+  gap:14px;
+
+  background:#101826;
+
+  padding:18px;
+
+  margin-bottom:40px;
+
+  box-shadow:0 8px 25px rgba(0,0,0,.15);
+}
+
+.trip-nav a{
+
+  background:#242c3d;
+
+  color:white;
+
+  padding:12px 18px;
+
+  border-radius:999px;
+
+  font-weight:600;
+
+  transition:.2s;
+}
+
+.trip-nav a:hover{
+
+  background:#4f7d53;
+
+  transform:translateY(-2px);
+}
+
+/* ==========================================
+   INFO GRID
+========================================== */
+
+.info-grid{
+
+  display:grid;
+
+  grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+  gap:24px;
+
+  padding:0 30px;
+}
+
+.info-card{
+
+  background:white;
+
+  border-radius:20px;
+
+  padding:28px;
+
+  text-align:center;
+
+  box-shadow:0 12px 28px rgba(0,0,0,.08);
+
+  transition:.25s;
+}
+
+.card-link:hover .info-card{
+
+  transform:translateY(-6px);
+
+  box-shadow:0 18px 38px rgba(0,0,0,.14);
+}
+
+.info-card h3{
+
+  margin-top:0;
+
+  font-size:2rem;
+}
+
+.info-card strong{
+
+  display:block;
+
+  margin:16px 0;
+
+  color:#444;
+}
+
+.info-card p{
+
+  line-height:1.6;
+  color:#666;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+  .overlay h1{
+    font-size:3rem;
+  }
+
+  .hero{
+    height:36vh;
+  }
+
+  .england-hero{
+    height:240px;
+  }
+
+  .hero-overlay h1{
+    font-size:2.8rem;
+  }
+
+  .hero-overlay p{
+    font-size:1.2rem;
+  }
+
+  .cards,
+  .info-grid{
+    padding:20px;
+  }
+
+}
