@@ -11,20 +11,22 @@ const styles = {
       "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
   },
   hero: {
-    minHeight: "210px",
-    backgroundImage: `linear-gradient(rgba(15,23,32,.18), rgba(15,23,32,.72)), url(${travelHubHero})`,
+    minHeight: "220px",
+    backgroundImage: `linear-gradient(rgba(15,23,32,.05), rgba(15,23,32,.22)), url(${travelHubHero})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     display: "flex",
     alignItems: "flex-end",
     padding: "1.25rem",
   },
-  overlay: {
-    width: "100%",
-    background: "linear-gradient(180deg, rgba(15,23,32,0), rgba(15,23,32,.82))",
-    padding: "1.5rem 1.25rem .5rem",
+  titleBar: {
+    padding: "18px 16px 16px",
     textAlign: "center",
-    transform: "translateY(-18px)",
+    color: "#f8fafc",
+    background: "#111827",
+  },
+  overlay: {
+    display: "none",
   },
   nav: {
     display: "flex",
@@ -90,6 +92,11 @@ const styles = {
     gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
     gap: "8px",
   },
+  flightGrid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(4, minmax(0, 1fr))",
+    gap: "8px",
+  },
   flightGroup: {
     display: "grid",
     gap: "5px",
@@ -144,15 +151,17 @@ function ResourceLink({ href, title, detail, details = [] }) {
 export default function TravelHub() {
   return (
     <div style={styles.page}>
+      <section style={styles.titleBar}>
+        <h1 style={{ fontSize: "clamp(2.2rem, 6vw, 3.5rem)", margin: 0, fontWeight: 900, color: "#ffffff" }}>
+          Travel Hub
+        </h1>
+        <p style={{ fontSize: ".9rem", margin: "8px 0 0", fontWeight: 700, color: "#cbd5e1" }}>
+          Everything you need for the journey
+        </p>
+      </section>
+
       <header style={styles.hero}>
-        <div style={styles.overlay}>
-          <h1 style={{ fontSize: "clamp(2.2rem, 6vw, 3.5rem)", margin: 0, fontWeight: 900, textShadow: "0 3px 18px rgba(0,0,0,.8)" }}>
-            ❤️ Travel Hub
-          </h1>
-          <p style={{ fontSize: ".9rem", margin: "8px 0 0", fontWeight: 700 }}>
-            Everything you need for the journey
-          </p>
-        </div>
+        <div style={styles.overlay} />
       </header>
 
       <nav style={styles.nav}>
@@ -163,10 +172,9 @@ export default function TravelHub() {
       </nav>
 
       <main style={styles.section}>
-        <div style={styles.dashboardGrid}>
-          <section style={{ ...styles.card, ...styles.tickets }}>
+        <section style={{ ...styles.card, ...styles.tickets }}>
           <h2 style={styles.sectionTitle}>🎫 Tickets & travel services</h2>
-          <div style={styles.grid}>
+          <div style={styles.flightGrid}>
             <div style={styles.flightGroup}>
               <span style={styles.flightLabel}>Flight to London</span>
               <ResourceLink
@@ -174,9 +182,39 @@ export default function TravelHub() {
                 title="✈️ United"
                 detail="Washington, DC (IAD) → London Heathrow (LHR)"
                 details={[
+                  "Flight UA 924",
+                  "Confirmation F1RCZ6",
                   "Departs Wed 23 Sep 2026 · 22:05",
                   "Arrives Thu 24 Sep 2026 · 10:40",
-                  "Seats 45L / 45K",
+                  "Duration · 7h 35m",
+                ]}
+              />
+            </div>
+            <div style={styles.flightGroup}>
+              <span style={styles.flightLabel}>Trip itinerary</span>
+              <ResourceLink
+                href={resources.journey}
+                title="🗺 Journee"
+                detail="Mystery trip itinerary"
+                details={[
+                  "Begins Tue 29 Sep 2026 · Departs 07:05",
+                  "London Gatwick North Terminal",
+                  "Ends Fri 9 Oct 2026 · Arrives 14:35",
+                  "London Gatwick South Terminal",
+                ]}
+              />
+            </div>
+            <div style={styles.flightGroup}>
+              <span style={styles.flightLabel}>Flight home</span>
+              <ResourceLink
+                href={resources.american}
+                title="✈️ American Airlines"
+                detail="Return journey · Confirmation SQAZRW"
+                details={[
+                  "AA8573 · Porto OPO → Madrid MAD",
+                  "Departs Fri 16 Oct · 08:20 · Arrives 10:40 · 1h 20m",
+                  "AA8729 · Madrid MAD → Washington IAD",
+                  "Departs Fri 16 Oct · 12:30 · Arrives 15:40 · 9h 10m",
                 ]}
               />
             </div>
@@ -192,24 +230,19 @@ export default function TravelHub() {
                 ]}
               />
             </div>
-            <div style={styles.flightGroup}>
-              <span style={styles.flightLabel}>Flight home</span>
-              <ResourceLink href={resources.american} title="✈️ American Airlines" detail="Open reservation details" />
-            </div>
           </div>
-          </section>
+        </section>
 
-          <section style={{ ...styles.card, ...styles.apps }}>
+        <section style={{ ...styles.card, ...styles.apps }}>
           <h2 style={styles.sectionTitle}>📱 Apps</h2>
           <div style={styles.grid}>
-            <ResourceLink href={resources.journey} title="🗺 Journee" detail="Open the trip itinerary" />
             <ResourceLink href={resources.faye} title="🛡 Faye" detail="Travel insurance app" />
             <ResourceLink href="https://maps.google.com" title="📍 Google Maps" detail="Maps, saved places, and directions" />
             <ResourceLink href="https://translate.google.com" title="💬 Google Translate" detail="Translate while traveling" />
             <ResourceLink href="https://www.xe.com/currencyconverter/" title="💱 XE Currency" detail="Check exchange rates" />
+            <ResourceLink href="https://citymapper.com" title="🚇 Citymapper" detail="Plan city journeys" />
           </div>
-          </section>
-        </div>
+        </section>
 
         <section style={{ ...styles.card, ...styles.planning }}>
           <h2 style={styles.sectionTitle}>📊 Shared planning</h2>

@@ -154,12 +154,14 @@ export default function Mystery() {
           <div>
             <section style={{ ...styles.card, ...styles.flightCard }}>
               <h2 style={styles.sectionTitle}>✈️ Flight out</h2>
-              <strong>Tuesday, September 29 at 07:05</strong>
+              <strong>Tuesday, September 29, 2026 · 07:05</strong>
+              <p>London Gatwick North Terminal</p>
             </section>
 
             <section style={{ ...styles.card, ...styles.flightCard }}>
               <h2 style={styles.sectionTitle}>🛬 Flight home</h2>
-              <strong>Friday, October 9 at 14:35</strong>
+              <strong>Friday, October 9, 2026 · 14:35</strong>
+              <p>London Gatwick South Terminal</p>
             </section>
           </div>
         </div>
