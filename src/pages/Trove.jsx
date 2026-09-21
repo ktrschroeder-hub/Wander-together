@@ -20,6 +20,7 @@ const styles = {
   content: { maxWidth: "900px", margin: "18px auto", padding: "0 14px" },
   intro: { padding: "22px", borderRadius: "20px", background: "#263f43", border: "2px solid #d6b45c", color: "#f7f4e8", textAlign: "center" },
   surpriseButton: { border: "1px solid #d6b45c", padding: "13px 20px", borderRadius: "999px", background: "#d6b45c", color: "#07151c", fontSize: "1rem", fontWeight: 900, cursor: "pointer" },
+  tripcastButton: { display: "inline-block", marginLeft: "10px", padding: "12px 18px", borderRadius: "999px", background: "#9fc3c3", border: "1px solid #6f8f72", color: "#07151c", textDecoration: "none", fontWeight: 900 },
   airtableEmbed: { width: "100%", height: "533px", marginTop: "18px", border: "1px solid #ccc", borderRadius: "12px", background: "transparent" },
   insightGrid: { display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: "12px", marginTop: "12px" },
   insight: { minHeight: "150px", padding: "18px", borderRadius: "20px", border: "2px solid #6f8f72", color: "#07151c", textAlign: "center" },
@@ -62,6 +63,9 @@ export default function Trove() {
           <button type="button" style={styles.surpriseButton} onClick={() => setSurpriseIndex((surpriseIndex + 1) % insights.length)}>
             ✨ Surprise Me
           </button>
+          <a href="https://tripcast.co/i/MYSDW4P4" target="_blank" rel="noreferrer" style={styles.tripcastButton}>
+            🗺 Open Tripcast
+          </a>
           <iframe
             className="airtable-embed"
             src="https://airtable.com/embed/appWoqkiCCSfqPQrU/pagzogDSuPHTyEwHG/form"

@@ -60,6 +60,16 @@ const styles = {
     color: "#0f172a",
     fontWeight: 700,
   },
+  anydo: {
+    display: "inline-block",
+    marginTop: "16px",
+    padding: "11px 16px",
+    borderRadius: "999px",
+    background: "#0f172a",
+    color: "#f8fafc",
+    textDecoration: "none",
+    fontWeight: 800,
+  },
 };
 
 export default function Today() {
@@ -92,6 +102,9 @@ export default function Today() {
             <label style={styles.todo}><input type="checkbox" /> Review travel plans</label>
             <label style={styles.todo}><input type="checkbox" /> Pack essentials</label>
           </div>
+          <a href="https://app.any.do/myday" target="_blank" rel="noreferrer" style={styles.anydo}>
+            ✅ Open Any.do
+          </a>
         </section>
       </main>
     </div>

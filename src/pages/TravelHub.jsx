@@ -245,6 +245,7 @@ export default function TravelHub() {
             <ResourceLink href="https://www.xe.com/currencyconverter/" title="💱 XE Currency" detail="Check exchange rates" />
             <ResourceLink href="https://citymapper.com" title="🚇 Citymapper" detail="Plan city journeys" />
             <ResourceLink href="https://bolt.eu/en/" title="🚕 Bolt" detail="Book rides while traveling" />
+            <ResourceLink href="https://tripcast.co/i/MYSDW4P4" title="🗺 Tripcast" detail="Open our shared trip" />
           </div>
         </section>
 
