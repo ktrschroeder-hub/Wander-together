@@ -38,6 +38,28 @@ const styles = {
     background: "#45D3B3",
     border: "1px solid rgba(148,163,184,.16)",
   },
+  calendar: {
+    width: "100%",
+    height: "min(600px, 70vh)",
+    border: 0,
+    borderRadius: "14px",
+    background: "#ffffff",
+  },
+  todoList: {
+    display: "grid",
+    gap: "10px",
+    marginTop: "14px",
+  },
+  todo: {
+    display: "flex",
+    alignItems: "center",
+    gap: "10px",
+    padding: "12px",
+    borderRadius: "12px",
+    background: "rgba(255,255,255,.9)",
+    color: "#0f172a",
+    fontWeight: 700,
+  },
 };
 
 export default function Today() {
@@ -55,8 +77,21 @@ export default function Today() {
       </nav>
       <main style={styles.content}>
         <section style={styles.card}>
-          <h2 style={{ marginTop: 0 }}>✨ Coming up today</h2>
-          <p style={{ marginBottom: 0, color: "#cbd5e1" }}>Add today’s weather, plans, and schedule here.</p>
+          <h2 style={{ marginTop: 0, color: "#0f172a" }}>📅 Calendar</h2>
+          <iframe
+            src="https://calendar.google.com/calendar/embed?src=mefa146%40gmail.com&ctz=America%2FNew_York"
+            title="Google Calendar"
+            style={styles.calendar}
+            frameBorder="0"
+            scrolling="no"
+          />
+
+          <h2 style={{ color: "#0f172a" }}>✨ Today’s Todos</h2>
+          <div style={styles.todoList}>
+            <label style={styles.todo}><input type="checkbox" /> Check today’s schedule</label>
+            <label style={styles.todo}><input type="checkbox" /> Review travel plans</label>
+            <label style={styles.todo}><input type="checkbox" /> Pack essentials</label>
+          </div>
         </section>
       </main>
     </div>
