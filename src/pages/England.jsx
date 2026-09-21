@@ -5,14 +5,14 @@ const styles = {
   page: {
     minHeight: "100vh",
     background:
-      "radial-gradient(circle at top, rgba(30,41,59,0.9), rgba(15,23,32,1) 42%)",
+      "#0f1720",
     color: "#f8fafc",
     fontFamily:
       "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
   },
 
   hero: {
-    minHeight: "360px",
+    minHeight: "230px",
     backgroundImage: `url(${london})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -23,11 +23,15 @@ const styles = {
 
   overlay: {
     width: "100%",
-    background:
-      "linear-gradient(180deg, rgba(15,23,32,0), rgba(15,23,32,.82))",
+    background: "transparent",
     padding: "2.5rem 1.25rem 1rem",
+    display: "flex",
+    alignItems: "baseline",
+    justifyContent: "center",
+    flexWrap: "wrap",
+    gap: "16px",
     textAlign: "center",
-    transform: "translateY(-18px)",
+    transform: "translateY(-10px)",
   },
   nav: {
     display: "flex",
@@ -62,8 +66,7 @@ const styles = {
   },
 
   card: {
-    background:
-      "linear-gradient(180deg, rgba(24,33,45,0.96), rgba(17,24,39,0.96))",
+    background: "#18212d",
     borderRadius: "22px",
     padding: "20px 18px 18px",
     marginBottom: "18px",
@@ -72,23 +75,23 @@ const styles = {
   },
 
   stayCard: {
-    background:
-      "linear-gradient(180deg, rgba(13,148,136,0.38), rgba(15,23,42,0.98))",
+    background: "#2F8F98",
+    color: "#0f172a",
   },
 
   transitCard: {
-    background:
-      "linear-gradient(180deg, rgba(79,70,229,0.38), rgba(15,23,42,0.98))",
+    background: "#5BB7E8",
+    color: "#0f172a",
   },
 
   foodCard: {
-    background:
-      "linear-gradient(180deg, rgba(234,88,12,0.38), rgba(15,23,42,0.98))",
+    background: "#D8B07A",
+    color: "#0f172a",
   },
 
   exploreCard: {
-    background:
-      "linear-gradient(180deg, rgba(22,163,74,0.38), rgba(15,23,42,0.98))",
+    background: "#D89A45",
+    color: "#0f172a",
   },
 
   sectionTitle: {
@@ -98,8 +101,7 @@ const styles = {
     gap: "8px",
     padding: "8px 12px",
     borderRadius: "999px",
-    background:
-      "linear-gradient(135deg, rgba(96,165,250,0.18), rgba(168,85,247,0.18))",
+    background: "rgba(15,23,32,.3)",
     border: "1px solid rgba(147,197,253,0.38)",
     fontSize: "1.1rem",
     fontWeight: 800,
@@ -140,8 +142,7 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     textAlign: "center",
-    background:
-      "linear-gradient(135deg, rgba(255,255,255,0.98), rgba(191,219,254,0.95))",
+    background: "#f8fafc",
     color: "#0f172a",
     textDecoration: "none",
     padding: "11px 12px",
@@ -160,7 +161,7 @@ export default function England() {
         <div style={styles.overlay}>
           <h1
             style={{
-              fontSize: "clamp(3.4rem, 8vw, 5.5rem)",
+              fontSize: "clamp(2.8rem, 7vw, 5rem)",
               lineHeight: 0.95,
               margin: 0,
               fontWeight: 900,
@@ -175,7 +176,7 @@ export default function England() {
           <p
             style={{
               fontSize: "1.15rem",
-              margin: "16px 0 0",
+              margin: 0,
               opacity: 1,
               fontWeight: 700,
               color: "#f8fafc",
@@ -246,7 +247,7 @@ export default function England() {
 
           <div style={styles.buttonGrid}>
             <a
-              href="https://livekindred.com"
+              href="https://livekindred.com/household/cmawyteli3kkkxc7xvp939dke"
               target="_blank"
               rel="noreferrer"
               style={styles.button}

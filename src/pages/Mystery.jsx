@@ -4,32 +4,34 @@ import mysteryHero from "../assets/images/journeyktand wade.jpeg";
 const styles = {
   page: {
     minHeight: "100vh",
-    background:
-      "radial-gradient(circle at top, rgba(30,41,59,0.9), rgba(15,23,32,1) 42%)",
+    background: "#101820",
     color: "#f8fafc",
     fontFamily:
       "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
   },
   date: {
-    padding: "12px 16px 10px",
-    textAlign: "center",
-    color: "#f8fafc",
-    background: "#0f172a",
-    fontSize: "1.05rem",
-    fontWeight: 800,
+    display: "none",
   },
   hero: {
-    minHeight: "360px",
+    minHeight: "230px",
     backgroundImage: `url(${mysteryHero})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     display: "flex",
-    alignItems: "flex-start",
-    padding: 0,
+    alignItems: "flex-end",
+    padding: "1.25rem",
   },
   overlay: {
     width: "100%",
-    minHeight: "360px",
+    minHeight: 0,
+    padding: "2.5rem 1.25rem 1rem",
+    display: "flex",
+    alignItems: "baseline",
+    justifyContent: "center",
+    flexWrap: "wrap",
+    gap: "16px",
+    textAlign: "center",
+    transform: "translateY(-10px)",
   },
   nav: {
     display: "flex",
@@ -38,7 +40,7 @@ const styles = {
     flexWrap: "wrap",
     gap: "10px",
     padding: "12px 16px",
-    background: "rgba(15, 23, 32, 0.9)",
+    background: "#0c141c",
     textAlign: "center",
     top: 0,
     zIndex: 20,
@@ -75,33 +77,36 @@ const styles = {
     boxShadow: "0 18px 40px rgba(15, 23, 32, 0.22)",
   },
   activeCard: {
-    background: "linear-gradient(180deg, rgba(124,58,237,.42), rgba(15,23,42,.98))",
+    background: "#45D3B3",
+    color: "#24102d",
   },
   flightCard: {
-    background: "linear-gradient(180deg, rgba(14,116,144,.42), rgba(15,23,42,.98))",
+    background: "#FFCB22",
+    color: "#24102d",
   },
   lockedCard: {
-    background: "linear-gradient(180deg, rgba(71,85,105,.6), rgba(15,23,42,.98))",
+    background: "#cdb6d9",
+    color: "#24102d",
   },
   sectionTitle: {
     margin: "0 0 16px",
     display: "inline-flex",
     padding: "8px 12px",
     borderRadius: "999px",
-    background: "rgba(255,255,255,.14)",
-    border: "1px solid rgba(255,255,255,.3)",
+    background: "rgba(36,16,45,.16)",
+    border: "1px solid rgba(255,255,255,.24)",
     fontSize: "1.1rem",
     fontWeight: 800,
-    color: "#f8fafc",
+    color: "#24102d",
   },
   linkedTitle: {
     margin: 0,
     display: "inline-flex",
     padding: "8px 12px",
     borderRadius: "999px",
-    background: "rgba(255,255,255,.14)",
-    border: "1px solid rgba(255,255,255,.3)",
-    color: "#f8fafc",
+    background: "rgba(36,16,45,.16)",
+    border: "1px solid rgba(255,255,255,.24)",
+    color: "#24102d",
     textDecoration: "none",
     fontSize: "1.1rem",
     fontWeight: 800,
@@ -111,8 +116,9 @@ const styles = {
     marginTop: "12px",
     padding: "8px 12px",
     borderRadius: "999px",
-    background: "rgba(255,255,255,.12)",
-    color: "#cbd5e1",
+    background: "#24102d",
+    color: "#ffffff",
+    border: "1px solid rgba(255,255,255,.35)",
     fontSize: ".85rem",
     fontWeight: 700,
   },
@@ -121,9 +127,15 @@ const styles = {
 export default function Mystery() {
   return (
     <div style={styles.page}>
-      <div style={styles.date}>Tuesday, September 29 – Friday, October 9</div>
       <header style={styles.hero}>
-        <div style={styles.overlay} />
+        <div style={styles.overlay}>
+          <h1 style={{ margin: 0, color: "#ffffff", fontSize: "clamp(3rem, 8vw, 5rem)", fontWeight: 900 }}>
+            Mystery Trip
+          </h1>
+          <p style={{ margin: 0, color: "#f8fafc", fontSize: "1.15rem", fontWeight: 700 }}>
+            Tuesday, September 29 – Friday, October 9
+          </p>
+        </div>
       </header>
 
       <nav style={styles.nav}>
@@ -137,33 +149,29 @@ export default function Mystery() {
 
       <main style={styles.section}>
         <div style={styles.dashboardGrid}>
-          <div>
-            <section style={{ ...styles.card, ...styles.activeCard }}>
-              <a href="https://passport.journeetrips.com/trips/xh6sgwmhzv/" target="_blank" rel="noreferrer" style={styles.linkedTitle}>
-                🗺 Journee Itinerary
-              </a>
-            </section>
+          <section style={{ ...styles.card, ...styles.flightCard }}>
+            <h2 style={styles.sectionTitle}>✈️ Flight out</h2>
+            <strong>Tuesday, September 29, 2026 · 07:05</strong>
+            <p>London Gatwick North Terminal</p>
+          </section>
 
-            <section style={{ ...styles.card, ...styles.activeCard }}>
-              <a href="https://explorers.journeetrips.com/weather/v2/2026-09-29/xh6sgwmhzvjj/forecast.html" target="_blank" rel="noreferrer" style={styles.linkedTitle}>
-                🌤 Weather
-              </a>
-            </section>
-          </div>
+          <section style={{ ...styles.card, ...styles.flightCard }}>
+            <h2 style={styles.sectionTitle}>🛬 Flight home</h2>
+            <strong>Friday, October 9, 2026 · 14:35</strong>
+            <p>London Gatwick South Terminal</p>
+          </section>
 
-          <div>
-            <section style={{ ...styles.card, ...styles.flightCard }}>
-              <h2 style={styles.sectionTitle}>✈️ Flight out</h2>
-              <strong>Tuesday, September 29, 2026 · 07:05</strong>
-              <p>London Gatwick North Terminal</p>
-            </section>
+          <section style={{ ...styles.card, ...styles.activeCard }}>
+            <a href="https://passport.journeetrips.com/trips/xh6sgwmhzv/" target="_blank" rel="noreferrer" style={styles.linkedTitle}>
+              🗺 Journee Itinerary
+            </a>
+          </section>
 
-            <section style={{ ...styles.card, ...styles.flightCard }}>
-              <h2 style={styles.sectionTitle}>🛬 Flight home</h2>
-              <strong>Friday, October 9, 2026 · 14:35</strong>
-              <p>London Gatwick South Terminal</p>
-            </section>
-          </div>
+          <section style={{ ...styles.card, ...styles.activeCard }}>
+            <a href="https://explorers.journeetrips.com/weather/v2/2026-09-29/xh6sgwmhzvjj/forecast.html" target="_blank" rel="noreferrer" style={styles.linkedTitle}>
+              🌤 Weather
+            </a>
+          </section>
         </div>
 
         <section style={{ ...styles.card, ...styles.lockedCard }}>

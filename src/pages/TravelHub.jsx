@@ -5,14 +5,14 @@ const styles = {
   page: {
     minHeight: "100vh",
     background:
-      "radial-gradient(circle at top, rgba(30,41,59,0.9), rgba(15,23,32,1) 42%)",
+      "#0f1720",
     color: "#f8fafc",
     fontFamily:
       "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
   },
   hero: {
-    minHeight: "220px",
-    backgroundImage: `linear-gradient(rgba(15,23,32,.05), rgba(15,23,32,.22)), url(${travelHubHero})`,
+    minHeight: "180px",
+    backgroundImage: `url(${travelHubHero})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
     display: "flex",
@@ -69,13 +69,16 @@ const styles = {
     boxShadow: "0 18px 40px rgba(15, 23, 32, 0.22)",
   },
   tickets: {
-    background: "linear-gradient(180deg, rgba(14,116,144,.42), rgba(15,23,42,.98))",
+    background: "#2A9D8F",
+    color: "#0f172a",
   },
   apps: {
-    background: "linear-gradient(180deg, rgba(124,58,237,.42), rgba(15,23,42,.98))",
+    background: "#E76F51",
+    color: "#0f172a",
   },
   planning: {
-    background: "linear-gradient(180deg, rgba(22,163,74,.4), rgba(15,23,42,.98))",
+    background: "#E9C46A",
+    color: "#0f172a",
   },
   sectionTitle: {
     margin: "0 0 10px",
@@ -223,7 +226,7 @@ export default function TravelHub() {
               <ResourceLink
                 href={resources.ejet}
                 title="✈️ easyJet EZY8523"
-                detail="London → Porto"
+                detail="London Gatwick (North Terminal) → Porto"
                 details={[
                   "Fri 9 Oct 2026 · Departs 16:35 · Arrives 19:05",
                   "Bag drop: 14:05–15:35",
@@ -241,6 +244,7 @@ export default function TravelHub() {
             <ResourceLink href="https://translate.google.com" title="💬 Google Translate" detail="Translate while traveling" />
             <ResourceLink href="https://www.xe.com/currencyconverter/" title="💱 XE Currency" detail="Check exchange rates" />
             <ResourceLink href="https://citymapper.com" title="🚇 Citymapper" detail="Plan city journeys" />
+            <ResourceLink href="https://bolt.eu/en/" title="🚕 Bolt" detail="Book rides while traveling" />
           </div>
         </section>
 

@@ -1,37 +1,78 @@
-import london from "../assets/images/London.jpeg";
 import { Link } from "react-router-dom";
+
+const styles = {
+  page: {
+    minHeight: "100vh",
+    background: "#0f1720",
+    color: "#f8fafc",
+    fontFamily: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+  },
+  hero: {
+    padding: "42px 16px 36px",
+    textAlign: "center",
+    background: "#45D3B3",
+  },
+  nav: {
+    display: "flex",
+    justifyContent: "center",
+    flexWrap: "wrap",
+    gap: "10px",
+    padding: "10px 12px",
+    background: "rgba(15,23,32,.92)",
+    borderBottom: "1px solid rgba(148,163,184,.12)",
+  },
+  navLink: {
+    padding: "9px 14px",
+    borderRadius: "999px",
+    background: "rgba(255,255,255,.06)",
+    border: "1px solid rgba(148,163,184,.22)",
+    color: "#e2e8f0",
+    textDecoration: "none",
+    fontWeight: 700,
+    fontSize: ".82rem",
+  },
+  content: {
+    maxWidth: "900px",
+    margin: "18px auto",
+    padding: "0 14px 24px",
+    display: "grid",
+    gridTemplateColumns: "repeat(2, minmax(0, 1fr))",
+    gap: "12px",
+  },
+  card: {
+    padding: "18px",
+    borderRadius: "20px",
+    background: "#45D3B3",
+    border: "1px solid rgba(148,163,184,.16)",
+  },
+};
 
 export default function HomeBase() {
   return (
-    <div className="england-page">
-      <header
-        className="england-hero"
-        style={{ backgroundImage: `url(${london})` }}
-      >
-        <div className="hero-overlay">
-          <h1>🏠 Home Base</h1>
-          <p>Residential & Cozy Home</p>
-        </div>
+    <div style={styles.page}>
+      <header style={styles.hero}>
+        <h1 style={{ margin: 0, fontSize: "clamp(2.4rem, 7vw, 4rem)" }}>Home Base</h1>
+        <p style={{ margin: "10px 0 0", color: "#cbd5e1" }}>Residential and cozy home.</p>
       </header>
 
-      <nav className="page-nav">
-        <Link to="/">🏠 Wander Together</Link>
-        <Link to="/england">🇬🇧 England</Link>
-        <span className="current">🏡 Home Base</span>
+      <nav style={styles.nav}>
+        <Link to="/" style={styles.navLink}>✈️ Wander2Gether</Link>
+        <Link to="/england" style={styles.navLink}>🇬🇧 England</Link>
+        <Link to="/hub" style={styles.navLink}>❤️ Travel Hub</Link>
       </nav>
 
-      <section className="info-grid">
-        <div className="info-card">
-          <h3>📍 Address</h3>
+      <main style={styles.content}>
+        <section style={styles.card}>
+          <h2 style={{ marginTop: 0 }}>📍 Address</h2>
           <p>
             Flat 10 Boston<br />
             Deals Gateway<br />
             London SE13 7RW
           </p>
-        </div>
+        </section>
 
-        <div className="info-card">
-          <h3>📅 Stay</h3>
+        <section style={styles.card}>
+          <h2 style={{ marginTop: 0 }}>📅 Stay</h2>
           <p>
             Check-in<br />
             Thursday, Sept 24 • 4:00 PM
@@ -41,12 +82,8 @@ export default function HomeBase() {
             Check-out<br />
             Monday, Sept 28 • 11:00 AM
           </p>
-        </div>
-      </section>
-
-      <div style={{ marginTop: "40px", textAlign: "center" }}>
-        <Link to="/england">← Back to England</Link>
-      </div>
+        </section>
+      </main>
     </div>
   );
 }
