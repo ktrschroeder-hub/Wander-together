@@ -22,6 +22,10 @@ const styles = {
   surpriseButton: { border: "1px solid #d6b45c", padding: "13px 20px", borderRadius: "999px", background: "#d6b45c", color: "#07151c", fontSize: "1rem", fontWeight: 900, cursor: "pointer" },
   tripcastButton: { display: "inline-block", marginLeft: "10px", padding: "12px 18px", borderRadius: "999px", background: "#9fc3c3", border: "1px solid #6f8f72", color: "#07151c", textDecoration: "none", fontWeight: 900 },
   airtableEmbed: { width: "100%", height: "533px", marginTop: "18px", border: "1px solid #ccc", borderRadius: "12px", background: "transparent" },
+  returnStay: { marginTop: "18px", padding: "20px", borderRadius: "20px", background: "#9fc3c3", color: "#07151c", textAlign: "left" },
+  stayHeading: { margin: "0 0 14px", fontSize: "1.2rem", fontWeight: 900 },
+  stayGrid: { display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: "12px" },
+  stayItem: { padding: "14px", borderRadius: "14px", background: "rgba(247, 244, 232, .72)", border: "1px solid rgba(7, 21, 28, .18)" },
   insightGrid: { display: "grid", gridTemplateColumns: "repeat(2, minmax(0, 1fr))", gap: "12px", marginTop: "12px" },
   insight: { minHeight: "150px", padding: "18px", borderRadius: "20px", border: "2px solid #6f8f72", color: "#07151c", textAlign: "center" },
   teal: { background: "#9fc3c3" },
@@ -74,6 +78,22 @@ export default function Trove() {
             onMouseWheel={() => {}}
             style={styles.airtableEmbed}
           />
+
+          <section style={styles.returnStay} aria-labelledby="return-stay-title">
+            <h2 id="return-stay-title" style={styles.stayHeading}>🏡 Return stay</h2>
+            <div style={styles.stayGrid}>
+              <article style={styles.stayItem}>
+                <p style={{ margin: 0, fontSize: ".75rem", fontWeight: 900, textTransform: "uppercase", letterSpacing: ".06em" }}>Check-in</p>
+                <p style={{ margin: "8px 0 0", fontWeight: 800 }}>Fri 9 Oct 2026</p>
+                <p style={{ margin: "4px 0 0" }}>From 3pm</p>
+              </article>
+              <article style={styles.stayItem}>
+                <p style={{ margin: 0, fontSize: ".75rem", fontWeight: 900, textTransform: "uppercase", letterSpacing: ".06em" }}>Check-out</p>
+                <p style={{ margin: "8px 0 0", fontWeight: 800 }}>Sat 10 Oct 2026</p>
+                <p style={{ margin: "4px 0 0" }}>By 12pm</p>
+              </article>
+            </div>
+          </section>
         </section>
 
         <section style={styles.insightGrid}>

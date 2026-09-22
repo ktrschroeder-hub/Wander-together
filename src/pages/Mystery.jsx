@@ -162,6 +162,20 @@ export default function Mystery() {
           </section>
 
           <section style={{ ...styles.card, ...styles.activeCard }}>
+            <h2 style={styles.sectionTitle}>🏨 Stay before</h2>
+            <p><strong>London Gatwick Airport North Terminal Hotel</strong></p>
+            <p>Check-in: Mon, Sep 28 · 3:00 PM<br />Check-out: Tue, Sep 29 · before 12:00 PM</p>
+            <p>Confirmation: <strong>BBP0193197</strong></p>
+            <a href="https://www.google.com/maps/search/?api=1&query=London%20Gatwick%20Airport%20%28North%20Terminal%29%20hotel%2C%20Northway%2C%20Crawley%20RH6%200GQ" target="_blank" rel="noreferrer" style={styles.linkedTitle}>📍 Open in Maps</a>
+            <a href="tel:03330038101" style={{ ...styles.linkedTitle, marginLeft: "8px" }}>📞 Call hotel</a>
+          </section>
+
+          <section style={{ ...styles.card, ...styles.activeCard }}>
+            <h2 style={styles.sectionTitle}>🏨 Stay after</h2>
+            <p>Return-stay details will be added once confirmed.</p>
+          </section>
+
+          <section style={{ ...styles.card, ...styles.activeCard }}>
             <a href="https://passport.journeetrips.com/trips/xh6sgwmhzv/" target="_blank" rel="noreferrer" style={styles.linkedTitle}>
               🗺 Journee Itinerary
             </a>

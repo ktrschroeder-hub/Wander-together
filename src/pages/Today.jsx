@@ -45,20 +45,13 @@ const styles = {
     borderRadius: "14px",
     background: "#ffffff",
   },
-  todoList: {
-    display: "grid",
-    gap: "10px",
+  airtable: {
+    width: "100%",
+    height: "min(533px, 70vh)",
     marginTop: "14px",
-  },
-  todo: {
-    display: "flex",
-    alignItems: "center",
-    gap: "10px",
-    padding: "12px",
+    border: "1px solid #ccc",
     borderRadius: "12px",
-    background: "rgba(255,255,255,.9)",
-    color: "#0f172a",
-    fontWeight: 700,
+    background: "transparent",
   },
   anydo: {
     display: "inline-block",
@@ -97,11 +90,14 @@ export default function Today() {
           />
 
           <h2 style={{ color: "#0f172a" }}>✨ Today’s Todos</h2>
-          <div style={styles.todoList}>
-            <label style={styles.todo}><input type="checkbox" /> Check today’s schedule</label>
-            <label style={styles.todo}><input type="checkbox" /> Review travel plans</label>
-            <label style={styles.todo}><input type="checkbox" /> Pack essentials</label>
-          </div>
+          <iframe
+            className="airtable-embed"
+            src="https://airtable.com/embed/appEOJCv4T7Zwv4yJ/shr5wINJe2cW3aITA"
+            title="Today's task list"
+            frameBorder="0"
+            scrolling="no"
+            style={styles.airtable}
+          />
           <a href="https://app.any.do/myday" target="_blank" rel="noreferrer" style={styles.anydo}>
             ✅ Open Any.do
           </a>
